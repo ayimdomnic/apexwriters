@@ -13,8 +13,18 @@
 
 $factory->define(App\User::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
+
         'email' => $faker->safeEmail,
+        'first_name' => $faker->firstName,
+        'second_name'=> $faker->lastName,
+
+        'highest_education_level'=>$faker->name,
+        'subjects_of_interest'=>$faker->name,
+        'username' =>$faker->name,
+        'type' =>$faker->name,
+        'country'=>$faker->country,
+        'avatar' =>$faker->text(10),
+        'bio' => $faker->text(250),
         'password' => bcrypt(str_random(10)),
         'remember_token' => str_random(10),
     ];

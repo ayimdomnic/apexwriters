@@ -19,3 +19,4 @@ Route::get('/', function () {
 //resource route for Orders
 
 Route::resource('admin/orders','Admin\\OrdersController');
+Route::resource('admin/users','Admin\\UsersController');
