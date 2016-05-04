@@ -29,6 +29,18 @@ class Orders extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function message()
+    {
+        return $this->hasMany(Message::class);
+    }
+
+    public function bids()
+    {
+        return $this->hasMany(Bid::class);
+    }
+
+
+
 }
 
 
