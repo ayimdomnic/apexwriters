@@ -14,7 +14,13 @@ class CreateBidsTable extends Migration
     {
         Schema::create('bids', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('order_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            $table->text('bid_statement');
+            $table->enum('status',['pending','completed']);
             $table->timestamps();
+
+            //Todo::Fix the foreign Keys and get the crud working
         });
     }
 
